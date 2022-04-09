@@ -17,6 +17,10 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .logo .img_logo {
+    height: 36px;
+    width: 36px;
+  }
   .burger {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -53,6 +57,21 @@
   .menu {
     display: none;
   }
+  .pink_bloob {
+    height: 175, 69px;
+    width: 278px;
+  }
+}
+
+.btn_Baground {
+  background-image: url(/Ronaldas/imiges/color_gradient.png);
+  width: auto;
+}
+
+button {
+  background: color white;
+  border-radius: 6px;
+  border: none;
 }
 
 @media screen and (min-width: 429px) {
@@ -73,6 +92,10 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .logo .img_logo {
+    height: 36px;
+    width: 36px;
   }
   .menu {
     display: -webkit-box;
