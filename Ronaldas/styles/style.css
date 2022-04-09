@@ -1,5 +1,11 @@
+@charset "UTF-8";
 body {
   background-color: white;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 nav {
@@ -10,6 +16,8 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-left: 32px;
+  padding-left: 0;
 }
 
 .logo {
@@ -25,7 +33,7 @@ nav {
 .logo .img_logo {
   height: 36px;
   width: 36px;
-  padding: 10px;
+  padding-top: 10px;
 }
 
 .burger {
@@ -77,26 +85,28 @@ nav {
 
 .pink_bloob {
   position: absolute;
-  left: 325px;
+  left: 350px;
   top: 48px;
   height: 278px;
   width: 175px;
 }
 
 .pink {
+  margin-left: 32px;
   font-family: Inter;
-  color: #FF3998;
+  color: #ff3998;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
 }
 
 .div_box_h1 {
-  width: 266px;
+  width: 300px;
   margin: 0;
 }
 
 .div_box_h1 h1 {
+  margin-left: 32px;
   font-family: Inter;
   font-weight: 900, bold;
   font-size: 48px;
@@ -107,6 +117,7 @@ nav {
 }
 
 .div_box_p p {
+  margin-left: 32px;
   font-family: Inter;
   font-size: 20px;
   line-height: 150%;
@@ -115,6 +126,90 @@ nav {
   color: #555555;
 }
 
+.background_gradient {
+  width: 428px;
+  height: 326px;
+  background: radial-gradient(ellipse at top 554.46px left -35.78px, #ff3998, transparent), radial-gradient(ellipse at left 98.31px top 520.84px, #ff8139, transparent), radial-gradient(ellipse at left 303.61px top 535.11px, #39FFA0, transparent), radial-gradient(ellipse at left -34.11px top 385.35px, #ff3939, transparent);
+}
+
+.background_gradient h2 {
+  margin-left: 32px;
+  margin-bottom: 10px;
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 500;
+  padding-top: 120px;
+  margin-left: 32px;
+}
+
+.background_gradient p {
+  margin-left: 32px;
+  margin-top: 0px;
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.flex_a {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+/*čia niekaip nesigavo išlygiuot tvarkingai kaip norėjau tai damušiau su pixeleis*/
+.container_boom {
+  padding-right: 15px;
+}
+
+.included_mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 30px;
+  color: #999999;
+}
+
+.excluded_mobile, span {
+  display: none;
+}
+
+.container_h2 {
+  margin-left: 32px;
+}
+
+.container_h2 h2 {
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 500;
+  padding-top: 10px;
+}
+
+.container_h2 p {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 500;
+  color: #555555;
+}
+
+.container_h2 a {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  color: #555555;
+}
+
+/*vėliau sugryžti pakoreguot font ir dydį*/
 .btn_Baground {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -125,6 +220,7 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 32px;
   background-image: url(/imiges/color_gradient.png);
   background-size: 100%;
   border: none;
@@ -144,6 +240,73 @@ nav {
   height: 30px;
   cursor: -webkit-grab;
   cursor: grab;
+}
+
+.flex_f1 {
+  margin-left: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex_f1 .flex_f1_c1, .flex_f1 .flex_f1_c2 {
+  margin-right: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex_f1 .flex_f1_c1 .flex_f1_c1_c1, .flex_f1 .flex_f1_c1 .flex_f1_c2_c1, .flex_f1 .flex_f1_c2 .flex_f1_c1_c1, .flex_f1 .flex_f1_c2 .flex_f1_c2_c1 {
+  padding: 18px;
+  background-color: #EEEEEE;
+  border-radius: 0 0 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 50px;
+          column-gap: 50px;
+}
+
+.flex_f1 .flex_f1_c1 .flex_f1_c1_c1 .gloop, .flex_f1 .flex_f1_c1 .flex_f1_c2_c1 .gloop, .flex_f1 .flex_f1_c2 .flex_f1_c1_c1 .gloop, .flex_f1 .flex_f1_c2 .flex_f1_c2_c1 .gloop {
+  margin: 0;
+  color: #FF8139;
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.flex_f1 .flex_f1_c1 .flex_f1_c1_c1 .bid, .flex_f1 .flex_f1_c1 .flex_f1_c2_c1 .bid, .flex_f1 .flex_f1_c2 .flex_f1_c1_c1 .bid, .flex_f1 .flex_f1_c2 .flex_f1_c2_c1 .bid {
+  margin: 0;
+  color: #777777;
+  font-size: 12px;
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.flex_f1 .flex_f1_c1 .flex_f1_c1_c1 .item_name_price, .flex_f1 .flex_f1_c1 .flex_f1_c2_c1 .item_name_price, .flex_f1 .flex_f1_c2 .flex_f1_c1_c1 .item_name_price, .flex_f1 .flex_f1_c2 .flex_f1_c2_c1 .item_name_price {
+  color: #111111;
+  font-size: 20px;
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.flex_f1 .flex_f1_c1 .flex_f1_c1_c1 .dark3, .flex_f1 .flex_f1_c1 .flex_f1_c2_c1 .dark3, .flex_f1 .flex_f1_c2 .flex_f1_c1_c1 .dark3, .flex_f1 .flex_f1_c2 .flex_f1_c2_c1 .dark3 {
+  margin: 0;
+  color: #777777;
+  font-size: 18px;
+  font-family: Inter;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 429px) {
