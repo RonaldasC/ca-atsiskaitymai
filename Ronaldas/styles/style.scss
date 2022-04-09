@@ -2,24 +2,53 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@mixin flex_row() {
+    display: flex;
+    flex-direction: row;
+}
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 428px) {
+    nav {
+        @include flex_row();
+    }
+    .logo {
+        display: flex;
+        flex-direction: row;
+    }
     .burger {
         @include flex_center();
         flex-direction: column;
         position: sticky;
-        top: 20px;
-        bottom: 20px;
-        background-color: rgba($color: gray, $alpha: 0.5);
+        top: 40px;
+        left: 370px;
+        background-color: rgba($color: gray, $alpha: 0.0);
         border-radius: 3px;
         width: 25px;
         height: 25px;
             .burger_bun { 
                 display: flex;
                 margin: 1px;
-                background-color: white;
-                width: 15px;
-                height: 2px;
+                background-color: #999999;
+                width: 24px;
+                height: 4px;
+                border-radius: 3px;
             }
         }
-}
+        .menu {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 429px ){
+        nav {
+            @include flex_row();
+        }
+        .logo {
+            @include flex_row();
+        }
+        .menu {
+            @include flex_row();
+        }
+
+    }
