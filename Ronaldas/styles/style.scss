@@ -23,31 +23,32 @@ body {
 
 
 
-@media screen and  (max-width: 428px) {
-
-.body {
+@media screen and  (max-width: 428px){
+  
+  /*testavimas klaidos*/
+  .body {
   border-radius: 10px;
   box-shadow: 0 0 10px 5px #555555;
   background-color: $backGraundColor;
-}
-html, body {//nzn ar veikia.
+  }
+  html, body {//nzn ar veikia.
   max-width: 100%;
   overflow-x: hidden;
-}
-nav {
+  }
+  nav {
   @include flex_row();
   @include leftMargin();
   padding-left: 0;
-}
-.logo {
-  display: flex;
-  flex-direction: row;
-  .img_logo {
-    height: 36px;
-    width: 36px;
-    padding-top: 10px;
   }
-}
+  .logo {
+    display: flex;
+    flex-direction: row;
+      .img_logo {
+        height: 36px;
+        width: 36px;
+        padding-top: 10px;
+    }
+  }
 .burger {
   @include flex_center();
   flex-direction: column;
@@ -147,12 +148,22 @@ nav {
   justify-content: space-between;
   }
   
-.flex_a :nth-child(1) {order: 1;}
-.flex_a :nth-child(2) {order: 2;}
-.flex_a :nth-child(3) {order: 3;}
-.flex_a :nth-child(4) {order: 5;}
-.flex_a :nth-child(5) {order: 4;}
- /*čia niekaip nesigavo išlygiuot tvarkingai kaip norėjau tai damušiau su pixeleis*/
+.flex_a :nth-child(1) {
+  order: 1;
+}
+.flex_a :nth-child(2) {
+  order: 2;
+}
+.flex_a :nth-child(3) {
+  order: 3;
+}
+.flex_a :nth-child(4) {
+  order: 5;
+}
+.flex_a :nth-child(5) {
+  order: 4;
+}
+ 
 .container {
   display: flex;
   flex-direction: row;
@@ -262,114 +273,124 @@ nav {
       }
     }
   }
-
+}
 section {
-  border-top: 2px solid #111111;
+  border-top: 2px solid #EEEEEE;
   width: 428px;
-  
-    h6 {
+    }
+  h6 {
     @include leftMargin();
     color: $textColor;
     font-family: $fontInter;
     font-size: 16px;
     }
-  h1 {
-    @include leftMargin();
-    font-family: $fontInter;
-    font-weight: 900, bold;
-    font-size: 56px;
+    h1 {
+      @include leftMargin();
+      font-family: $fontInter;
+      font-weight: 900, bold;
+      font-size: 56px;
+        }
+  .img_green_woman_posision {
+    position: absolute;
+    top: 1910px;
+    left: 240px;
+    height: 467px;
+    width: 206px;
   }
-}
-.img_green_woman_posision {
-  position: absolute;
-  top: 2010px;
-  left: 240px;
-  height: 467px;
-  width: 206px;
-}
-.section_b {
-  display: flex;
-  flex-direction: column;
-  height: 265px;
-  border-bottom: 2px #EEEEEE solid;
-  p {
-    align-self: flex-start;
-    width: 207px;
-    @include leftMargin();
-    margin-top: 50px;
-    font-family: $fontInter;
-    font-weight: 400;
-    color: #555555;
-  }
-}
-.logo_foot {
-  @include leftMargin();
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  .img_logo {
-    height: 36px;
-    width: 36px;
-    padding-top: 10px;
-    }
-  }
-  .link_stile_foot {
-    text-decoration: none;
-    font-family: Varela Round;
-    font-size: 28px;
-    font-weight: 900;
-    color: black;
-  }
-  .font {
-    text-decoration: none;
-    font-family: Inter;
-    color: #555555;
-    font-weight: 400;
-    font-size: 20px;
-  }
-  .foot_f {
-    @include leftMargin();
-  }
-  .flex_r {
-    @include leftMargin();
-    display: flex;
-    align-items: flex-start;
-    img {
-      padding: 5px;
-      height: 18px;
-      width: 18px;
-       
-    }
-  }
-  .flex_f_footer {
-    @include leftMargin();
-    display: flex;
-    flex-wrap: wrap;
-    column-count: 2;
-    column-gap: 100px;
-  .flex_f_footer_links {
+  .section_b {
     display: flex;
     flex-direction: column;
+    height: 265px;
+    border-bottom: 2px #EEEEEE solid;
     p {
-      font-family: Inter;
-      font-weight: 700;
-      font-size: 16px;
-      color: #555555
-      }
+      align-self: flex-start;
+      width: 207px;
+      @include leftMargin();
+      margin-top: 50px;
+      font-family: $fontInter;
+      font-weight: 400;
+      color: #555555;
     }
   }
-  .Copyright {
-    margin-left: 30px;
-    font-family: Inter;
-    font-weight: 400;
-    font-size: 20px;
-    color: #999999;
-  }
-  .exclude_mobile_Copyright {
-    display: none;
-  }
-}
-}
+  .logo_foot {
+    @include leftMargin();
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .img_logo {
+      height: 36px;
+      width: 36px;
+      padding-top: 10px;
+      }
+    }
+    .link_stile_foot {
+      text-decoration: none;
+      font-family: Varela Round;
+      font-size: 28px;
+      font-weight: 900;
+      color: black;
+    }
+    .font {
+      text-decoration: none;
+      font-family: Inter;
+      color: #555555;
+      font-weight: 400;
+      font-size: 20px;
+    }
+    .foot_f {
+      @include leftMargin();
+    }
+    .flex_r {
+      @include leftMargin();
+      display: flex;
+      align-items: flex-start;
+      img {
+        padding: 5px;
+        height: 18px;
+        width: 18px;
+      }
+    }
+    .flex_f_footer {
+      @include leftMargin();
+      display: flex;
+      flex-wrap: wrap;
+      column-count: 2;
+      column-gap: 100px;
+    .flex_f_footer_links {
+      display: flex;
+      flex-direction: column;
+      p {
+        font-family: Inter;
+        font-weight: 700;
+        font-size: 16px;
+        color: #555555
+        }
+      }
+    }
+    .Copyright {
+      margin-left: 30px;
+      font-family: Inter;
+      font-weight: 400;
+      font-size: 20px;
+      color: #999999;
+    }
+    .exclude_mobile_Copyright {
+      display: none;
+    }
+  
+}//media quaer 428
+
+/*klaidos paieška adsssssssssssssssssssssssssssssssssssssssssssssssssssssss
+asdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
+asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
+
+
+
+  
+  
+  
+  
+
 
 
 
@@ -613,6 +634,8 @@ br {
     }
   }
 }
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 section {
   margin-left: 80px;
   margin-right: 80px;
@@ -636,9 +659,10 @@ section {
     font-size: 56px;
   }
 }
+
 .img_green_woman_posision {
   position: absolute;
-  top: 2212px;
+  top: 2208px;
   left: 933px;
   height: 467px;
   width: 206px;
@@ -692,7 +716,7 @@ section {
     font-size: 20px;
   }
  
-  }
+  
   .flex_r {
     
     display: flex;
@@ -739,4 +763,4 @@ section {
     display: flex;
     justify-content: space-between;
   }
-
+}
