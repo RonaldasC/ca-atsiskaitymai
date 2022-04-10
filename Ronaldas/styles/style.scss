@@ -114,7 +114,7 @@ nav {
     font-weight: 400;
     font-style: normal;
     color: #555555;
-  }
+}
 
 }
 .background_gradient {
@@ -360,22 +360,108 @@ section {
 }
 
 
-@media screen and (min-width: 429px) and (max-width: 1440) {
-  nav {
-    @include flex_row();
+/*desktop*/
+
+.body {
+  background-color: $backGraundColor;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .img_logo {
+    height: 36px;
+    width: 36px;
+    padding-top: 10px;
   }
-  .logo {
-    @include flex_row();
-    .img_logo {
-      height: 36px;
-      width: 36px;
+  .link_stile {
+      text-decoration: none;
+      font-family: Varela Round;
+      font-size: 28px;
+      font-weight: 900;
+      color: black;
     }
   }
-  .menu {
-    @include flex_row();
-  }
-  .burger {
-    display: none;
-  }
+.burger {
+  display: none;
+}
+.flex_d {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 80px;
+}
+.menu {
+  display: flex;
   
+  div {
+    padding: 10px;
+    a {
+      text-decoration: none;
+      font-family: Inter, regular;
+      font-size: 20px;
+      font-weight: 400;
+      color: #555555;
+    }
+    .font_pink {
+      color: $textColor;
+    }
+  } 
+}
+.pink {
+  margin-left: 80px;
+  font-family: $fontInter;
+  color: $textColor;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+}
+.div_box_h1 {
+  width: 620px;
+  margin: 0;
+  h1 {
+    margin-left: 80px;
+    font-family: $fontInter;
+    font-weight: 900, bold;
+    font-size: 96px;
+  }
+}
+.div_box_p {
+  width: 600px;
+  p {
+    margin-left: 80px;
+    font-family: $fontInter;
+    font-size: 20px;
+    font-weight: 400;
+    color: #555555;
+  }
+}
+.pink_bloob {
+  position: absolute;
+  left: 851px;
+  top: 288px;
+  height: 519px;
+  width: 328px;
+}
+/*vėliau sugryžti pakoreguot font ir dydį*/
+.btn_Baground {
+  @include flex_center();
+  margin-left: 80px;
+  background-image: url(/imiges/color_gradient.png);
+  background-size: 100%;
+  border: none;
+  border-radius: 35px;
+  width: 170px;
+  height: 70px;
+  cursor: grab;
+  button {
+    background-color: $backGraundColor;
+    border-radius: 31px;
+    border: none;
+    padding: 20;
+    width: 162px;
+    height: 62px;
+    cursor: grab;
+  }
 }
