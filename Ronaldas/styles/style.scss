@@ -113,7 +113,6 @@ nav {
     font-style: normal;
     color: #555555;
 }
-
 }
 .background_gradient {
   width: 428px;
@@ -140,27 +139,38 @@ nav {
       font-weight: 400;
     }
 }
+
 .flex_a {
   padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 40px;
-  flex-direction: row;
-}
- /*čia niekaip nesigavo išlygiuot tvarkingai kaip norėjau tai damušiau su pixeleis*/
-.container, .boom{
-  padding-right: 15px;
+  justify-content: space-between;
+  }
   
+.flex_a :nth-child(1) {order: 1;}
+.flex_a :nth-child(2) {order: 2;}
+.flex_a :nth-child(3) {order: 3;}
+.flex_a :nth-child(4) {order: 5;}
+.flex_a :nth-child(5) {order: 4;}
+ /*čia niekaip nesigavo išlygiuot tvarkingai kaip norėjau tai damušiau su pixeleis*/
+.container {
+  display: flex;
+  flex-direction: row;
+  padding-right: 14px;
+  width: 140px;  
+}
+.img {
+  height: 40px;
+  width: 40px;
 }
 .included_mobile{  
-  display: flex;
   text-decoration: none;
   font-family: Roboto;
   font-size: 30px;
   color: #999999;
   }
   
-.excluded_mobile, span {
+.excluded_mobile, span, .door {
     display: none
 }
 .container_h2 {
@@ -252,17 +262,17 @@ nav {
       }
     }
   }
-}
+
 section {
-  border-top: 2px solid #EEEEEE;
-  width: 100%;
+  border-top: 2px solid #111111;
+  width: 428px;
   
-  h6 {
+    h6 {
     @include leftMargin();
     color: $textColor;
     font-family: $fontInter;
     font-size: 16px;
-  }
+    }
   h1 {
     @include leftMargin();
     font-family: $fontInter;
@@ -277,7 +287,7 @@ section {
   height: 467px;
   width: 206px;
 }
-.section_b{
+.section_b {
   display: flex;
   flex-direction: column;
   height: 265px;
@@ -291,7 +301,6 @@ section {
     font-weight: 400;
     color: #555555;
   }
-
 }
 .logo_foot {
   @include leftMargin();
@@ -302,8 +311,8 @@ section {
     height: 36px;
     width: 36px;
     padding-top: 10px;
+    }
   }
-}
   .link_stile_foot {
     text-decoration: none;
     font-family: Varela Round;
@@ -360,6 +369,8 @@ section {
     display: none;
   }
 }
+}
+
 
 
 
@@ -520,11 +531,14 @@ section {
     font-family: Roboto;
     font-size: 30px;
     color: #999999;
-    img {
-      height: 40px;
-      width: 40px;
-    }
   }
+}
+.container {
+  display: flex;
+}
+.img {
+  height: 40px;
+  width: 40px;
 }
 br {
   display: none;
