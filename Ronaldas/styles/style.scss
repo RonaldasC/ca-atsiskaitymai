@@ -17,11 +17,21 @@ $fontInter: Inter;
 }
 
 body {
-  background-color: $backGraundColor;
+  background-color: #EEEEEE;
 }
 
-@media screen and (min-width: 428px) and (max-width: 429px) {
+
+
+@media screen and  (max-width: 428px) {
+
+.body {
+  background-color: $backGraundColor;
+  
 }
+/*.main_body {
+  background-color: #EEEEEE;
+  height: 2000px;
+}*/
 html, body {//nzn ar veikia.
   max-width: 100%;
   overflow-x: hidden;
@@ -45,7 +55,7 @@ nav {
   flex-direction: column;
   position: sticky;
   top: 40px;
-  left: 370px;
+  left: 320px;
   background-color: rgba($color: gray, $alpha: 0);
   border-radius: 3px;
   width: 25px;
@@ -71,7 +81,7 @@ nav {
 }
 .pink_bloob {
   position: absolute;
-  left: 350px;
+  left: 290px;
   top: 48px;
   height: 278px;
   width: 175px;
@@ -202,7 +212,7 @@ nav {
   @include leftMargin();
   display: flex;
   .flex_f1_c1, .flex_f1_c2/*, .flex_f1_c3, .flex_f1_c4*/ {
-    margin-right: 55px;
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
     .flex_f1_c1_c1, .flex_f1_c2_c1/*, .flex_f1_c3_c1, .flex_f1_c4_c1*/ {
@@ -244,8 +254,113 @@ nav {
     }
   }
 }
+section {
+  border-top: 2px solid #EEEEEE;
+  width: 100%;
+  
+  h6 {
+    @include leftMargin();
+    color: $textColor;
+    font-family: $fontInter;
+    font-size: 16px;
+  }
+  h1 {
+    @include leftMargin();
+    font-family: $fontInter;
+    font-weight: 900, bold;
+    font-size: 56px;
+  }
+}
+.img_green_woman_posision {
+  position: absolute;
+  top: 1950px;
+  left: 220px;
+  height: 467px;
+  width: 206px;
+}
+.section_b{
+  display: flex;
+  flex-direction: column;
+  height: 265px;
+  border-bottom: 2px #EEEEEE solid;
+  p {
+    align-self: flex-start;
+    width: 207px;
+    @include leftMargin();
+    margin-top: 50px;
+    font-family: $fontInter;
+    font-weight: 400;
+    color: #555555;
+  }
 
-@media screen and (min-width: 429px) {
+}
+.logo_foot {
+  @include leftMargin();
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .img_logo {
+    height: 36px;
+    width: 36px;
+    padding-top: 10px;
+  }
+}
+  .link_stile_foot {
+    text-decoration: none;
+    font-family: Varela Round;
+    font-size: 28px;
+    font-weight: 900;
+    color: black;
+  }
+  .font {
+    text-decoration: none;
+    font-family: Inter;
+    color: #555555;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .foot_f {
+    @include leftMargin();
+  }
+  .flex_r {
+    @include leftMargin();
+    display: flex;
+    align-items: flex-start;
+    img {
+      padding: 5px;
+      height: 18px;
+      width: 18px;
+       
+    }
+  }
+  .flex_f_footer {
+    @include leftMargin();
+    display: flex;
+    flex-wrap: wrap;
+    column-count: 2;
+    column-gap: 100px;
+  .flex_f_footer_links {
+    display: flex;
+    flex-direction: column;
+    p {
+      font-family: Inter;
+      font-weight: 700;
+      font-size: 16px;
+      color: #555555
+      }
+    }
+  }
+  .Copyright {
+    @include leftMargin();
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 20px;
+    color: #999999;
+  }
+}
+
+
+@media screen and (min-width: 429px) and (max-width: 1440) {
   nav {
     @include flex_row();
   }
@@ -262,4 +377,5 @@ nav {
   .burger {
     display: none;
   }
+  
 }
