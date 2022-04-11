@@ -1,8 +1,14 @@
-$backGraundColor: white;
+/*html geriausiai veikai 428px pločio ekranuose ir 1440px
+    geriausias visualus rezultatas 1440px ekrana atsidarius atsidaryti dev tools ir pasirinkt mobilaus yrenginio peržiūra ir 
+    tada nusistayti 428px dydį ekranui*/
+
+$backGraundColor: rgb(255, 255, 255); //čia pakeitus spalvą bagraund pasikeičia ir sign up mygtukams bent taip turėtų būti
 $textColor: #ff3998;
-$fontInter: Inter;
+$fontInter: Inter; //beprasmiškai padariau $fontInter nes vėliau kitus fontus tiesiai į kodą įrašiau
 
-
+/*manau bereikalo @mixin leftMargin() panaudojau praranda prasmę ir per visą 
+dokumentą reik naudot kai galėjau konteineriui viena kart 
+panaudot o ne atskiriems elementasm kaip dabar*/
 @mixin leftMargin() {
   margin-left: 32px;
 }
@@ -15,17 +21,10 @@ $fontInter: Inter;
   display: flex;
   flex-direction: row;
 }
-
 body {
-  background-color: #EEEEEE;
-  border-radius: px;
+  background-color: $backGraundColor;
 }
-
-
-
 @media screen and  (max-width: 428px){
-  
-  /*testavimas klaidos*/
   .body {
   border-radius: 10px;
   box-shadow: 0 0 10px 5px #555555;
@@ -49,7 +48,7 @@ body {
         padding-top: 10px;
     }
   }
-.burger {
+  .burger {
   @include flex_center();
   flex-direction: column;
   position: sticky;
@@ -66,25 +65,25 @@ body {
     width: 24px;
     height: 4px;
     border-radius: 3px;
+   }
   }
-}
 .link_stile {
   text-decoration: none;
   font-family: Varela Round;
   font-size: 48px;
   font-weight: 400;
   color: black;
-}
+  }
 .menu {
   display: none;
-}
+  }
 .pink_bloob {
   position: absolute;
   left: 290px;
   top: 48px;
   height: 278px;
   width: 175px;
-}
+  }
 .pink {
   @include leftMargin();
   font-family: $fontInter;
@@ -92,7 +91,7 @@ body {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
-}
+  }
 .div_box_h1 {
   width: 300px;
   margin: 0;
@@ -101,8 +100,8 @@ body {
     font-family: $fontInter;
     font-weight: 900, bold;
     font-size: 48px;
+    }
   }
-}
 .div_box_p {
   width: 266px;
   p {
@@ -113,8 +112,8 @@ body {
     font-weight: 400;
     font-style: normal;
     color: #555555;
-}
-}
+    }
+  }
 .background_gradient {
   width: 428px;
   height: 326px;
@@ -139,7 +138,7 @@ body {
       font-size: 20px;
       font-weight: 400;
     }
-}
+  }
 
 .flex_a {
   padding-top: 50px;
@@ -148,32 +147,32 @@ body {
   justify-content: space-between;
   }
   
-.flex_a :nth-child(1) {
+.flex_a :nth-child(1) {//čia nežinau kaip švariau kodas turėtų atrodyt taip kaip dabar ar pvz.:.flex_a :nth-child(2) {order: 2;}
   order: 1;
-}
+  }
 .flex_a :nth-child(2) {
   order: 2;
-}
+  }
 .flex_a :nth-child(3) {
   order: 3;
-}
+  }
 .flex_a :nth-child(4) {
   order: 5;
-}
+  }
 .flex_a :nth-child(5) {
   order: 4;
-}
+  }
  
 .container {
   display: flex;
   flex-direction: row;
   padding-right: 14px;
   width: 140px;  
-}
+  }
 .img {
   height: 40px;
   width: 40px;
-}
+  }
 .included_mobile{  
   text-decoration: none;
   font-family: Roboto;
@@ -183,7 +182,7 @@ body {
   
 .excluded_mobile, span, .door {
     display: none
-}
+  }
 .container_h2 {
   @include leftMargin();
   h2{
@@ -193,19 +192,18 @@ body {
   padding-top: 10px;  
   }
   p {
-      
-      font-family: $fontInter;
-      font-size: 20px;
-      font-weight: 500;
-      color: #555555;
+    font-family: $fontInter;
+    font-size: 20px;
+    font-weight: 500;
+    color: #555555;
   }
   a {
     font-family: $fontInter;
     font-size: 20px;
     font-weight: 400;
     color: #555555;
+    }
   }
-}
 
 /*vėliau sugryžti pakoreguot font ir dydį*/
 .btn_Baground {
@@ -226,12 +224,14 @@ body {
     width: 76px;
     height: 30px;
     cursor: grab;
+    }
   }
-}
+  /*čia .flex_f1_c3, .flex_f1_c4 komentarai padaryti kodo rašymo eigoje su intensiją šitą koda nukopijuoti
+  desctop versijai ir kad tik tereiktu vaikus atkomentuot ir kodas iškar veiktu kas buvo ir padaryta*/
 .flex_f1 {
   @include leftMargin();
   display: flex;
-  .flex_f1_c1, .flex_f1_c2/*, .flex_f1_c3, .flex_f1_c4*/ {
+  .flex_f1_c1, .flex_f1_c2/*, .flex_f1_c3, .flex_f1_c4*/ { 
     margin-right: 20px;
     display: flex;
     flex-direction: column;
@@ -270,14 +270,14 @@ body {
         font-size: 18px;
         font-family: $fontInter;
         font-weight: 400;
+        }
       }
     }
   }
-}
 section {
   border-top: 2px solid #EEEEEE;
   width: 428px;
-    }
+  }
   h6 {
     @include leftMargin();
     color: $textColor;
@@ -378,32 +378,14 @@ section {
       display: none;
     }
   
-}//media quaer 428
-
-/*klaidos paieška adsssssssssssssssssssssssssssssssssssssssssssssssssssssss
-asdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
-asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
-
-
-
-  
-  
-  
-  
-
-
-
-
-
-
+}
 /*desktop*/
 @media screen and  (min-width: 429px) and (max-width: 1440px) {
-  .body {
+.body {//čia @mixin reiktų panaudot
     border-radius: 10px;
     box-shadow: 0 0 10px 5px #555555;
     background-color: $backGraundColor;
   }
-
 .logo {
   display: flex;
   flex-direction: row;
@@ -423,17 +405,15 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
   }
 .burger {
   display: none;
-}
+  }
 .flex_d {
-  
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 70px 80px;
-}
+  }
 .menu {
   display: flex;
-  
   div {
     padding: 10px;
     a {
@@ -445,9 +425,9 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
     }
     .font_pink {
       color: $textColor;
-    }
-  } 
-}
+      }
+    } 
+  }
 .pink {
   margin-left: 80px;
   font-family: $fontInter;
@@ -455,7 +435,7 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 700;
-}
+  }
 .div_box_h1 {
   width: 620px;
   margin: 0;
@@ -464,8 +444,8 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
     font-family: $fontInter;
     font-weight: 900, bold;
     font-size: 96px;
+    }
   }
-}
 .div_box_p {
   width: 600px;
   p {
@@ -474,18 +454,18 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
     font-size: 20px;
     font-weight: 400;
     color: #555555;
+    }
   }
-}
 .pink_bloob {
   position: absolute;
   left: 851px;
   top: 288px;
   height: 519px;
   width: 328px;
-}
+  }
 .hot_fix{
   margin-left: 80px;
-}
+  }
 /*vėliau sugryžti pakoreguot font ir dydį*/
 .btn_Baground {
   @include flex_center();
@@ -505,8 +485,8 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
     width: 162px;
     height: 62px;
     cursor: grab;
+    }
   }
-}
 .background_gradient {
   display: flex;
   flex-direction: column;
@@ -517,7 +497,7 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
   border-radius: 20px;
   width: 1280px;
   height: 320px;
-  background: radial-gradient(ellipse at top 907px right 1141px, #ff3998, transparent),
+  background: radial-gradient(ellipse at top 907px right 1141px, #ff3998, transparent),//čia tai nežinojau kaip ellipse aprašyt nes reikėjo jos pločio ir auksčio daug laiko sugaišta
     radial-gradient(ellipse at right 73px top 874px, #ff8139, transparent),
     radial-gradient(ellipse at right -39px top 888px, #39FFA0, transparent),
     radial-gradient(ellipse at right 469px top 741px, #ff3939, transparent);
@@ -537,7 +517,7 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
       font-size: 20px;
       font-weight: 400;
     }
-}
+  }
 .flex_a {
   margin-left: 80px;
   margin-top: 80px;
@@ -552,18 +532,18 @@ asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
     font-family: Roboto;
     font-size: 30px;
     color: #999999;
+    }
   }
-}
 .container {
   display: flex;
-}
+  }
 .img {
   height: 40px;
   width: 40px;
-}
-br {
+  }
+br { //čia prisiminiau kad galiu br display none pabandyt todėl html vienur yra br kitur nėra
   display: none;
-}
+  }
 .container_h2 {
   margin-left: 80px;
   h2{
@@ -585,8 +565,8 @@ br {
     font-size: 20px;
     font-weight: 400;
     color: #555555;
+   }
   }
-}
 .flex_f1 {
   margin-left: 80px;
   margin-bottom: 120px;
@@ -630,20 +610,16 @@ br {
         font-size: 18px;
         font-family: $fontInter;
         font-weight: 400;
-      }
-    }
+       }
+     }
+   }
   }
-}
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 section {
   margin-left: 80px;
   margin-right: 80px;
   border-top: 2px solid #EEEEEE;
   width: calc(100%-80px);
-  
   h6 {
-    
     margin-top: 120px;
     margin-bottom: 20px;
     color: $textColor;
@@ -652,13 +628,12 @@ section {
     text-transform: uppercase;
   }
   h1 {
-    
     margin-top: 0px;
     font-family: $fontInter;
     font-weight: 900, bold;
     font-size: 56px;
+    }
   }
-}
 
 .img_green_woman_posision {
   position: absolute;
@@ -666,7 +641,7 @@ section {
   left: 933px;
   height: 467px;
   width: 206px;
-}
+  }
 .section_b {
   display: flex;
   flex-direction: column;
@@ -684,14 +659,13 @@ section {
     font-weight: 400;
     font-size: 20px;
     color: #555555;
+    }
   }
-}
 .left_foot {
   display: flex;
   flex-direction: column
-}
+  }
 .logo_foot {
-  
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -699,8 +673,8 @@ section {
     height: 36px;
     width: 36px;
     padding-top: 10px;
+    }
   }
-}
   .link_stile_foot {
     text-decoration: none;
     font-family: Varela Round;
@@ -715,10 +689,7 @@ section {
     font-weight: 400;
     font-size: 20px;
   }
- 
-  
   .flex_r {
-    
     display: flex;
     align-items: flex-start;
     img {
@@ -751,7 +722,6 @@ section {
     margin-right: 80px;
   }
   .Copyright, .exclude_mobile_Copyright {
-    
     font-family: Inter;
     font-weight: 400;
     font-size: 20px;
@@ -762,5 +732,5 @@ section {
     margin-right: 80px;
     display: flex;
     justify-content: space-between;
+    }
   }
-}

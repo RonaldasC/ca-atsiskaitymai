@@ -1,11 +1,15 @@
 @charset "UTF-8";
+/*html geriausiai veikai 428px pločio ekranuose ir 1440px
+    geriausias visualus rezultatas 1440px ekrana atsidarius atsidaryti dev tools ir pasirinkt mobilaus yrenginio peržiūra ir 
+    tada nusistayti 428px dydį ekranui*/
+/*manau bereikalo @mixin leftMargin() panaudojau praranda prasmę ir per visą 
+dokumentą reik naudot kai galėjau konteineriui viena kart 
+panaudot o ne atskiriems elementasm kaip dabar*/
 body {
-  background-color: #EEEEEE;
-  border-radius: px;
+  background-color: white;
 }
 
 @media screen and (max-width: 428px) {
-  /*testavimas klaidos*/
   .body {
     border-radius: 10px;
     -webkit-box-shadow: 0 0 10px 5px #555555;
@@ -255,6 +259,8 @@ body {
     cursor: -webkit-grab;
     cursor: grab;
   }
+  /*čia .flex_f1_c3, .flex_f1_c4 komentarai padaryti kodo rašymo eigoje su intensiją šitą koda nukopijuoti
+  desctop versijai ir kad tik tereiktu vaikus atkomentuot ir kodas iškar veiktu kas buvo ir padaryta*/
   .flex_f1 {
     margin-left: 32px;
     display: -webkit-box;
@@ -447,9 +453,6 @@ body {
   }
 }
 
-/*klaidos paieška adsssssssssssssssssssssssssssssssssssssssssssssssssssssss
-asdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsdsd
-asdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd*/
 /*desktop*/
 @media screen and (min-width: 429px) and (max-width: 1440px) {
   .body {
